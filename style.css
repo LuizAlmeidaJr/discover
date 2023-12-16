@@ -2,15 +2,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-weight: 500;
 }
-/* Mayk aplicou a fonte em body * */
+
+:root {
+  --color0: white;
+  --color1: black;
+  --color2: rgba(255, 255, 255, 0.1);
+  --color3: rgba(255, 255, 255, 0.2);
+  --color4: rgba(255, 255, 255, 0.5);
+  --color5: rgb(144, 96, 252);
+  --color6: rgb(4, 211, 97);
+  --color7: rgba(0, 0, 0, 0.05);
+  --color8: rgba(0, 0, 0, 0.15);
+  --bgUrl: url(./assets/assets/bg-mobile.jpg);
+  --borderColor: var(--color2);
+  --bgColor: var(--color3);
+  --bgColorHover: var(--color4);
+  --darkModeSwitch: url(./assets/assets/moon-stars.svg);
+}
+
+/* .light {
+  --color0: var(--color1);
+  --bgUrl: url(./assets/assets/bg-mobile-light.jpg);
+  --borderColor: var(--color4);
+  --bgColor: var(--color7);
+  --bgColorHover: var(--color8);
+  --darkModeSwitch: url(./assets/assets/sun.svg);
+} */
 
 body {
-  background: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bgUrl) no-repeat top center/cover;
+  font-family: "Inter", sans-serif;
+  color: var(--color0);
+  font-weight: 500;
 }
 
 #container {
@@ -37,6 +61,39 @@ body {
   line-height: 24px;
 }
 
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--darkModeSwitch) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right:0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bgColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 9999px;
+}
+
 ul {
   list-style: none;
   display: flex;
@@ -45,22 +102,26 @@ ul {
   padding: 24px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul li a {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--bgColor);
+  color: var(--color0);
+  border: 1px solid var(--borderColor);
   border-radius: 8px;
   backdrop-filter: blur(4px);
   padding: 16px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   transition: background 0.2s;
 }
 
 ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid white;
+  background-color: var(--bgColorHover);
+  border: 1.5px solid var(--color0);
 }
 
 #socialLinks {
@@ -77,8 +138,25 @@ ul li a:hover {
   padding: 16px;
   border-radius: 50%;
   transition: background 0.2s;
+  color: var(--color0);
 }
 
 #socialLinks a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color3);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--color5);
+  text-shadow: 0.5px 0.5px 1px var(--color6);
+}
+
+footer a:hover {
+  color: var(--color0);
 }

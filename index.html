@@ -16,42 +16,61 @@
   <body>
     <div id="container">
       <div id="profile">
-        <img src="./assets/assets/avatar.png" alt="Profile Image" />
+        <img
+          src="./assets/assets/avatar.png"
+          alt="Profile Image"
+          id="profileImage"
+        />
         <p>@luizalmeidajr</p>
       </div>
-      <div id="switch">
+      <div id="switch" onclick="toggleMode()">
         <button></button>
         <span></span>
       </div>
       <ul>
         <li>
-          <a href="#">Inscrever-se no NLW</a>
+          <a href="https://github.com/LuizAlmeidaJr" target="_blank"
+            >Conheça meu portifólio</a
+          >
         </li>
         <li>
-          <a href="#">Baixar meu e-book</a>
+          <a href="https://luizalmeidajr.github.io/curriculo/" target="_blank"
+            >Veja meu currículo</a
+          >
         </li>
         <li>
-          <a href="https://github.com/LuizAlmeidaJr">Ver meu portifólio</a>
+          <a
+            href="https://www.linkedin.com/in/luiz-almeida-jr-643789224/"
+            target="_blank"
+            >Tem LinkedIn? Bora conectar!</a
+          >
         </li>
         <li>
-          <a href="https://rocketseat.com.br/explorer" target="_blank"
-            >Conheça o Explorer</a
+          <a href="https://www.rocketseat.com.br/discover" target="_blank"
+            >Conheça o Discover</a
           >
         </li>
       </ul>
       <div id="socialLinks">
-        <a href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="#" target="_blank"
+        <a href="https://github.com/LuizAlmeidaJr" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/luiz-almeida-jr-643789224/"
+          target="_blank"
           ><ion-icon name="logo-linkedin"></ion-icon
         ></a>
-        <a href="#" target="_blank"
+        <a href="mailto:lcalmeidajr91@gmail.com" target="_blank"
           ><ion-icon name="mail-outline"></ion-icon
         ></a>
-        <a href="#" target="_blank"
+        <a href="https://wa.me/5514997345373" target="_blank"
           ><ion-icon name="logo-whatsapp"></ion-icon
         ></a>
       </div>
-      <footer>Gostou? Para aprender, veja na <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a></footer>
+      <footer>
+        Gostou? Para aprender, veja na
+        <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>
+      </footer>
     </div>
     <script
       type="module"
@@ -61,5 +80,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

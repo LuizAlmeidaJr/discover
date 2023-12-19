@@ -21,14 +21,14 @@
   --darkModeSwitch: url(./assets/assets/moon-stars.svg);
 }
 
-/* .light {
+.light {
   --color0: var(--color1);
   --bgUrl: url(./assets/assets/bg-mobile-light.jpg);
   --borderColor: var(--color4);
   --bgColor: var(--color7);
   --bgColorHover: var(--color8);
   --darkModeSwitch: url(./assets/assets/sun.svg);
-} */
+}
 
 body {
   background: var(--bgUrl) no-repeat top center/cover;

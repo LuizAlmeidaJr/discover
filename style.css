@@ -79,11 +79,15 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: slideDarkMode 0.4s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--bgColorHover);
 }
 
 .light #switch button {
-  right:0;
-  left: initial;
+  animation: slideLightMode 0.4s forwards;
 }
 
 #switch span {
@@ -160,4 +164,36 @@ footer a {
 
 footer a:hover {
   color: var(--color0);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bgUrl: url(./assets/assets/bg-desktop.jpg);
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  .light {
+    --bgUrl: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slideDarkMode {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideLightMode {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
